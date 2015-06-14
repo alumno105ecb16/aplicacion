@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+ 
+        <title>Mi aplicacion</title>
+
+        <!--grupo CSS-->
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" /> 
+        
+        
+
+
+        <!--grupo JavaScript-->
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/acciones.js" type="text/javascript"></script>
+        
+        <script src="phonegap.js" type="text/javascript"></script>
+ </head>
+
+ <body>
+<!-- Principal -->
+     <div data-role="page" id="principal" >   
+        <div data-role="header" data-position="fixed" data-tap-toggle="false">     
+<div align="center"><img class="logotipo" src="imagenes/logotipo.png" ></div>
+
+        </div>    
+         
+         <div data-role="main" class="ui-content" >
+          <div align="center">
+           <div style="width:65%">
+             <div>             
+              <a href="#estudiar" data-transition="slide" class="ui-btn ui-corner-all ui-shadow ui-icon-bullets  ui-btn-icon-right" >Estudiar</a>
+             </div>
+             <div>
+              <a href="#modulos" data-transition="flip" class="ui-btn ui-corner-all ui-shadow ui-icon-edit ui-btn-icon-right" >Jugar</a>
+             </div>
+             
+             <div>
+              <a href="#puntajes" data-transition="fade" class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-right" >Puntajes</a>
+             </div>
+           </div>
+           
+           <a  href="#infoPrincipal"  data-rel="popup" data-transition="pop"  class="my-tooltip-btn ui-btn  ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info
+ui-btn-icon-notext"> </a>
+          </div>
+         </div>      
+
+        
+
+<div data-role="popup"  id="infoPrincipal"  data-theme="a" class="ui-corner-all"> 
+ <div align="center">
+ <div style=" width:70%"> <h2>Comenzar</h2>
+  <p class="wrap" align="justify"> Desde esta ventana podras acceder, mediante el boton <b>'Estudiar'</b>, a los temas y conenido de la materia de MATEMATICAS APLICADAS</p>
+    <p class="wrap" align="justify"> En la opcion de <b>'Jugar'</b> podras probar tu nivel en el domino de los temas abordados a lo largo de la materia, con preguntas y respuestas de los contenidos de cada Módulo.</p>
+    
+        <p class="wrap" align="justify"> Por ultimo en la seccion de <b>'Puntajes'</b> podras visualizar una tabla con los nombres de los mejores puntajes obtenidos en la seccion de 'Jugar'</p>
+  
+ </div>
+</div>
+</div>
+        
+        
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+          <div data-role="navbar">
+           <ul>    
+            <li><a href="#about" data-icon="comment"  >Acerca de</a></li>
+            <li><a href="#config" data-icon="gear" >Configuración</a></li>
+           </ul>
+         </div>
+        </div>        
+        
+     </div>
+  
+<!-- Principal -->
+<!-- estudiar -->
+<div data-role="page" id="estudiar" >   
+ <div data-role="header" data-position="fixed" data-tap-toggle="false" align="center" >     
+  <div align="center"><img class="logotipo" src="imagenes/logotipo.png" ></div>
+  <h1>Estudiar</h1>
+  <a data-rel="back" class="ui-btn-right ui-btn ui-btn-b ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-home" >Inicio</a>
+ </div>    <!-- header -->
+ 
+ <div data-role="main" class="ui-content" >
+  <div align="center">
+   <div style="width:90%">
+    <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right">
+     <h1> Perfil</h1>
+     <div style="text-align:left"> 
+      <p>En este curso aprenderas a derivar e integrar y aplicarlo en la vida real:</p>
+      <br>
+     </div> <!-- left -->
+     <div> 
+      <img src="imagenes/DGETI.jpg" width="30%" height="20%">
+     </div>
+    </div> <!-- collapsable --> 
+   </div> <!-- 90% -->
+   <div>
+    <ul data-role="listview" data-inset="true">
+     <li><a href="#temas"><img src="imagenes/uno.png"><h3>Segundo Semestre</h3>    
+      <p class="wrap">Submódulo 1 - INTEGRAL INDEFINIDA</p>
+      <p class="wrap">Submódulo 2 - DIFERENCIAL </p></a>
+     </li>
+     <li><a href="#temas"><img src="imagenes/dos.png"><h3>Tercer Semestre</h3>    
+      <p class="wrap">Submódulo 1 - METODOS DE INTEGRACION MEDIATOS </p>
+      <p class="wrap">Submódulo 2 - Diseña y administra bases de datos avanzadas </p></a>
+     </li>
+    </ul>
+   </div>            <!-- modulos -->
+  </div>      <!-- center -->
+ </div>      <!-- main -->
+
+ <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+  <div data-role="navbar">
+   <ul>
+    <li><a href="#acerca" data-icon="info">Información</a></li>
+    <li><a href="#config" data-icon="gear">Configuración</a></li>
+   </ul>
+  </div> <!-- nav -->
+ </div>        <!-- footer -->
+</div> <!-- page -->
+     
+<!-- estudiar -->  
+<!-- temas -->   
+<div data-role="page" id="temas" >   
+ 
+ <div data-role="panel" id="mipanel" data-position="left" data-display="overlay">	
+  <div data-role="collapsible" data-collapsed-icon="bullets" data-expanded-icon="carat-u" data-iconpos="right" >
+   <h4>Módulo I</h4>
+   <ul data-role="listview" >
+    <li data-icon="arrow-r" data-iconpos="right" data-rel="close"><a class="ligas" href="#uno" ><small>1.1INTEGRAL INDEFINIDA</small></a></li>
+    <li data-icon="arrow-r" data-iconpos="right" data-rel="close"><a class="ligas" href="#dos" ><small>1.2 DIFERENCIAL</small></a></li>
+    <li data-icon="arrow-r" data-iconpos="right" data-rel="close"><a class="ligas" href="#tres" ><small>1.3 METODOS DE INTEGRACION INMEDIATAS</small></a></li>
+    <li data-icon="arrow-r" data-iconpos="right" data-rel="close"><a class="ligas" href="#cuatro" ><small>1.4 METODOS DE INTEGRACIN MEDIATAS</small></a></li>
+    <li data-icon="arrow-r" data-iconpos="right" data-rel=
+   </ul>
+  </div> <!-- collapsible -->
+  
+  <div data-role="collapsible" data-collapsed-icon="bullets" data-expanded-icon="carat-u" data-iconpos="right" class=" ui-disabled">
+   <h4>Módulo II</h4>
+  </div>
+
+  <div data-role="collapsible" data-collapsed-icon="bullets" data-expanded-icon="carat-u" data-iconpos="right" class=" ui-disabled">
+   <h4>Módulo III</h4>
+  </div>
+
+  <div data-role="collapsible" data-collapsed-icon="bullets" data-expanded-icon="carat-u" data-iconpos="right" class=" ui-disabled">
+   <h4>Módulo IV</h4>
+  </div>
+
+  <div data-role="collapsible" data-collapsed-icon="bullets" data-expanded-icon="carat-u" data-iconpos="right" class=" ui-disabled">
+   <h4>Módulo V</h4>
+  </div>
+ </div> <!-- panel menu -->
+
+ <div data-role="header" id="encabezado" data-position="fixed" data-tap-toggle="false">     
+  <a href="#mipanel" class="ui-btn-left ui-btn ui-btn-b ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-bars">Contenido</a>
+  <div align="center"><img class="logotipo" src="imagenes/logotipo.png"></div><h1>Temas</h1>
+  <a href="#principal" class="ui-btn-right ui-btn ui-btn-b ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-home">Inicio</a>
+ </div>    
+
+ <div data-role="main" class="ui-content" >
+  <div align="center">
+   <div style="width:90%">
+    <a id="uno" href="">1.1 INTEGRAL INDEFINIDA</a>
+    <p class="wrap" align="justify">En cálculo infinitesimal, la función primitiva o antiderivada de una función f es una función F cuya derivada es f, es decir, F ′ = f.
+
+Una condición suficiente para que una función f admita primitivas sobre un intervalo es que sea continua en dicho intervalo.
+
+Si una función f admite una primitiva sobre un intervalo, admite una infinidad, que difieren entre sí en una constante: si F1 y F2 son dos primitivas de f, entonces existe un número real C, tal que F1 = F2 + C. A C se le conoce como constante de integración. Como consecuencia, si F es una primitiva de una función f, el conjunto de sus primitivas es F + C. A dicho conjunto se le llama integral indefinida de f y se representa como:
+
+\int{f}   ó   \int{f(x)dx}.</p>
+     1.1.1 DIFERENCIAL
+     <p class="wrap" align="justify">En matemáticas concretamente en cálculo diferencial, el diferencial es un objeto matemático que representa la parte principal del cambio en la linealización de una función y = ƒ(x) con respecto a cambios en la variable independiente. Existen diversas definiciones de diferencial en diversos contextos.</p>
+     
+
+     <a id="dos" href="">1.2 METODOS DE INTEGRACION INMEDIATOS</a>
+     <p class="wrap" align="justify">El método de integración por PARTES es el que resulta de aplicar el siguiente teorema:
+
+Eligiendo adecuadamente los valores de \ u y \ dv, puede simplificarse mucho la resolución de la integral.
+
+int (desde “a” a “b”) u dv = uv – int(desde “a” a “b”)vdu
+</p>
+    
+        <a id="tres" href="">1.3 METODOS DE INTEGRACION MEDIATOS</a>
+
+        <p class="wrap" align="justify">El método de integración por partes permite calcular la integral de un producto de dos funciones aplicando la fórmula:
+fórmula de la integral por partes
+
+Las funciones logarítmicas, "arcos" y polinómicas se eligen como u.
+
+Las funciones exponenciales y trígonométricas del tipo seno y coseno, se eligen como v'.</p>
+        
+        <a id="cuatro" href="">1.4 INTEGRAL DEFINIDA</a>
+        <p class="wrap" align="justify">Dada una función f(x) y un intervalo [a,b], la integral definida es igual al área limitada entre la gráfica de f(x), el eje de abscisas, y las rectas verticales x = a y x = b.</p>
+        
+         <a id="cinco" href="">1.5 SUMA DE RIEMANN</a>
+         <p class="wrap" align="justify">En matemáticas, la suma de Riemann sirve para calcular el valor de una integral definida, es decir, el área bajo una curva, este método es muy útil cuando no es posible utilizar el Teorema fundamental del cálculo. Estas sumas toman su nombre del matemático alemán Bernhard Riemann.
+
+La suma de Riemann consiste en trazar un número finito de rectángulos dentro de un área irregular, calcular el área de cada uno de ellos y sumarlos. El problema de este método de integración numérica es que al sumar las áreas se obtiene un margen de error muy grande.</p>
+             </div> <!-- width -->
+         </div> <!-- center -->
+        </div> <!-- main -->
+        
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+          <div data-role="navbar">
+           <ul>    
+            <li><a href="#acerca" data-icon="info"  >Información</a></li>
+            <li><a href="#config" data-icon="gear" >Configuración</a></li>
+           </ul>
+          </div>
+        </div>        
+        
+     </div>
+     <!-- temas -->
+     
+<!-- jugar -->     
+<div data-role="page" id="jugar" >   
+ <div data-role="header" data-position="fixed" data-tap-toggle="false">     
+  <div align="center"><img class="logotipo" src="imagenes/logotipo.png" ></div>
+  <h1>Jugar</h1>
+  <a href="#principal" class="ui-btn-right ui-btn ui-btn-b ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-home" >Inicio</a>
+ </div>    
+        
+ <div data-role="main" class="ui-content" >
+  <div align="center">
+   <div> 
+    <span id="nombrej"> Nombre </span>
+   </div> 
+                      
+   <div style="width:80%">
+    <div>
+     <ul data-role="listview" data-inset="true" data-divider-theme="a">
+      <h3><li data-role="list-divider" id="pregunta" ><p class="wrap">Pregunta</p></li></h3>
+      <li data-icon="false" class="resp"><a href="#"  id="respuesta1"><img src="imagenes/r1.png" class="ui-li-icon ui-corner-none"><p class="wrap">Respuesta 1</p></a></li>
+      <li data-icon="false" class="resp"><a href="#"  id="respuesta2"><img src="imagenes/r2.png" class="ui-li-icon ui-corner-none"><p class="wrap">Respuesta 2</p></a></li>
+      <li data-icon="false" class="resp"><a href="#"  id="respuesta3"><img src="imagenes/r3.png" class="ui-li-icon ui-corner-none"><p class="wrap">Respuesta 3</p></a></li>
+      <li data-icon="false" class="resp"><a href="#"  id="respuesta4"><img src="imagenes/r4.png" class="ui-li-icon ui-corner-none"><p class="wrap">Respuesta 4</p></a></li>
+     </ul>
+    </div>
+   </div>
+   <div>
+    <h3><span id="aciertos"> # </span> Aciertos</h3>
+   </div>
+  </div>
+ </div>      
+      
+ <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+  <div data-role="navbar">
+   <ul>
+    <li><a href="#acerca" data-icon="info"  >Información</a></li>
+    <li><a href="#config" data-icon="gear" >Configuración</a></li>
+   </ul>
+  </div>
+ </div>        
+</div>
+ 
+<!-- jugar -->     
+
+<!-- config -->     
+<div data-role="page" id="config">   
+ <div data-role="header" data-position="fixed" data-tap-toggle="false">     
+  <div align="center"><img class="logotipo" src="imagenes/logotipo.png" ></div>
+  <h1> Configuración </h1>
+ </div>    
+         
+ <div data-role="main" class="ui-content" >
+  <div align="center">
+   <div  style="width:70%">
+    <ul data-role="listview" data-inset="true" data-divider-theme="a" style="text-align:center">
+     <li data-role="list-divider" ><p style="font-size:1.2em; font-weight:bold">Datos del usuario</p></li>
+     <li data-icon="false">
+      <div style="width:100%" align="center">
+       <input id='usuario' name='txtusuario' placeholder="Nombre" type="text" data-inline="true">              
+       <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-user ui-btn-icon-right ui-btn-inline">Aceptar</a>
+      </div>
+     </li>
+    </ul>
+   </div>
+           
+   <div  style="width:70%">
+    <ul data-role="listview" data-inset="true" data-divider-theme="a" style="text-align:center">
+     <li data-role="list-divider" ><p style="font-size:1.2em; font-weight:bold">Musica</p></li>
+     <li data-icon="false">
+      <div style="width:100%" align="center">
+       <a id="muscia" href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-audio ui-btn-icon-right  ui-btn-inline">Musica</a>
+      </div>
+     </li>
+    </ul>
+   </div>
+           
+   <div  style="width:70%">
+    <ul data-role="listview" data-inset="true" data-divider-theme="a" style="text-align:center">
+     <li data-role="list-divider" ><p style="font-size:1.2em; font-weight:bold">Actualizar</p></li>
+     <li data-icon="false">
+      <div  style="width:100%" align="center">
+       <a id="actualizar" href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-recycle ui-btn-icon-right  ui-btn-inline ">Buscar preguntas</a>
+      </div>
+     </li>
+    </ul>
+   </div>
+  </div>
+ </div>
+         
+ <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+  <div data-role="navbar">
+   <ul>    
+    <li><a href="#principal" data-icon="home"  >Inicio</a></li>
+   </ul>
+  </div>
+ </div>        
+</div>
+<!-- config -->
+
+
+<!-- about -->
+<div data-role="page" id="about" >   
+ <div data-role="header" data-position="fixed" data-tap-toggle="false">     
+  <div align="center"><img class="logotipo" src="images/Dibujo+cálculo.JPG" ></div>
+  <h1> Acerca de</h1>
+  <a data-rel="back" class="ui-btn-right ui-btn ui-btn-b ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-home" >Inicio</a>
+ </div>    
+         
+ <div data-role="main" class="ui-content" >
+  <div align="center">
+   <div style="width:70%">
+    <p class="wrap" align="justify"> Nuestra aplicación es una herramienta que le permite a los alumnos de CETis y CBTis repasar y poner a prueba sus conocimientos subre la materia de <b> matematicas aplicadas</b> de una forma fácil y divertida, mediante el uso de juegos y puntajes.    </p>
+    
+    <p align="justify"> Aplicación desarrollada por <b> Rosa María Hidalgo Lopez </b> alumna de Sexto semestre de la especialidad de Programación del CBTis 16, Atlixco, Puebla, 2015
+    </p>
+   </div>
+   
+   <div  style="width:70%">
+    <a href="#popRosa"  data-rel="popup"  data-position-to="window"  data-transition="fade" ><img class="popphoto"  src="imagenes/hlrosa.jpg" style="width:20%"></a>
+    <div data-role="popup"  id="popRosa"  data-overlay-theme="b"  data-theme="b" data-corners="false">
+     <a href="#"  data-rel="back"  class="ui-btn ui-corner-all  ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext  ui-btn-right">Close</a>
+     <img class="popphoto" src="imagenes/hlrosa.jpg" style="max-height:230px;" >
+    </div>
+   </div>
+
+  </div>
+ </div>
+</div>
+
+<!-- about -->
+<!-- modulos -->
+<div data-role="page" id="modulos" >   
+ <div data-role="header" data-position="fixed" data-tap-toggle="false">     
+  <div align="center"><img class="logotipo" src="imagenes/logotipo.png" ></div>
+  <h1> Elige un modulo para jugar</h1>
+  <a data-rel="back" class="ui-btn-right ui-btn ui-btn-b ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-home" >Inicio</a>
+ </div>    
+        
+ <div data-role="main" class="ui-content" >
+  <div align="center">
+   <div style="width:70%">
+    <a href="#jugar" class="ui-btn ui-shadow  ui-icon-grid ui-btn-icon-right ui-corner-all jugart">Preguntas del Modulo I</a>
+    <a href="#" class="ui-btn ui-shadow  ui-icon-grid ui-btn-icon-right ui-corner-all ui-disabled">Preguntas del Modulo II</a>
+    <a href="#" class="ui-btn ui-shadow  ui-icon-grid ui-btn-icon-right ui-corner-all ui-disabled">Preguntas del Modulo III</a>
+    <a href="#" class="ui-btn ui-shadow  ui-icon-grid ui-btn-icon-right ui-corner-all ui-disabled">Preguntas del Modulo IV</a>
+    <a href="#" class="ui-btn ui-shadow  ui-icon-grid ui-btn-icon-right ui-corner-all ui-disabled">Preguntas del Modulo V</a>
+    <a href="#" class="ui-btn ui-shadow  ui-icon-grid ui-btn-icon-right ui-corner-all ui-disabled">Todos los Modulos</a>
+   </div>             
+  </div>
+ </div>
+</div>
+<!-- modulos-->
+
+ </body>
+</html> 
